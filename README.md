@@ -1,5 +1,5 @@
 ## Proje Açıklaması 📂
-
+**projeI.ipynb**
 Bu proje, farklı dönemlere ait şarkı sözlerinin analizini içerir. Dönemlere ve sanatçılara göre ayrılmış veri setiyle, hangi dönemde hangi duyguların baskın olduğunu yorumlamayı amaçlamaktadır.
 
 ## Projedeki Eksiklikler 🛠️
