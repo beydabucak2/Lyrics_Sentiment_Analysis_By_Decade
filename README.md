@@ -1,4 +1,4 @@
-# Firstly, please check the SentimentAnalysis_compressed.pdf Presentation. 🎶
+# Firstly, please check the presentation: Presentation Link: https://publuu.com/flip-book/767516/1702331 🎶
 
 ## Project Description 📂
 **projectI.ipynb**  
