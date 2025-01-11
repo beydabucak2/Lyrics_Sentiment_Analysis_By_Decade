@@ -1,4 +1,4 @@
-# Firstly, please check the presentation: Presentation Link: https://publuu.com/flip-book/767516/1702331 🎶
+# Firstly, please check the presentation: https://publuu.com/flip-book/767516/1702331 🎶
 
 ## Project Description 📂
 **projectI.ipynb**  
