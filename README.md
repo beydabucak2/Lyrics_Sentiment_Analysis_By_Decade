@@ -1,70 +1,41 @@
-## Proje Açıklaması 📂
-**projeI.ipynb**
-Bu proje, farklı dönemlere ait şarkı sözlerinin analizini içerir. Dönemlere ve sanatçılara göre ayrılmış veri setiyle, hangi dönemde hangi duyguların baskın olduğunu yorumlamayı amaçlamaktadır.
+# Firstly, please check the SentimentAnalysis_compressed.pdf Presentation. 🎶
 
-## Projedeki Eksiklikler 🛠️
+## Project Description 📂
+**projectI.ipynb**  
+This project involves the analysis of song lyrics from different eras. With a dataset categorized by eras and artists, the aim is to interpret which emotions were predominant in each era.
 
-- **Yetersiz Veri Çeşidi**: Proje, ücretsiz API kısıtlamaları ve Hugging Face modelinin karakter sınırlaması nedeniyle sınırlı veriyle yapıldı. Dönemleri direkt olarak çekemediğim için her bir sanatçıyı ayrı kaydedip, sonradan dönemlere ilişkilendirdim. Bu nedenle proje süresi uzadı ve veri hazırlamaya çok zaman harcadım.
-  
-- **Yetersiz Duygu Kategorisi**: Projede yalnızca 3 kategori (pozitif, negatif, nötr) kullanıldı. Hugging Face modelindeki "label" sınırlamaları nedeniyle başka kategorilere ulaşamadım. Proje II dersimde, savaş, aşk, ayrılık, dans gibi temalar eklemeyi ve Hugging Face kullanmadan projeyi genişletmeyi hedefliyorum.
+## Project Limitations 🛠️
 
-## Proje İçeriği 📂
+- **Insufficient Data Variety**: Due to the limitations of the free API and the character limit of the Hugging Face model, the project was done with limited data. Since I couldn't directly pull the eras, I recorded each artist separately and later associated them with specific eras. As a result, the project duration was extended and a lot of time was spent on data preparation.
 
-- **Veri Setinin Bulunması**: Genius API ve lyricsgenius kütüphanesiyle, farklı dönemlerde popüler şarkılara sahip sanatçıların şarkı sözlerini derledim. Sanatçılar döneme göre ayrıldı ve ayrı datasetler oluşturuldu. Böylece hem sanatçılar hem de dönemler üzerinden işlem yapma imkânı sağlandı.
+- **Insufficient Emotion Categories**: Only three categories (positive, negative, neutral) were used in the project. Due to "label" limitations in the Hugging Face model, I couldn’t access additional categories. In my Project II course, I plan to add themes like war, love, separation, and dance and expand the project without using Hugging Face.
 
-- **Veri Setinin Temizlenmesi ve Hazırlanması**: Şarkı sözlerindeki gereksiz kelimeler temizlendi. NLTK modülü kullanılarak açıklamalar çıkarıldı. JSON dosyaları önce DataFrame’e, sonra pickle dosyalarına dönüştürülerek analize uygun hale getirildi.
+## Project Content 📂
 
-- **Analiz**: Hugging Face kütüphanesindeki bir model entegre edilerek duygu analizi yapıldı. Model, şarkı sözlerini "pozitif", "negatif" ve "nötr" etiketleriyle sınıflandırdı.
+- **Finding the Dataset**: Using the Genius API and the lyricsgenius library, I gathered song lyrics from artists who had popular songs in different eras. The artists were categorized by era, and separate datasets were created. This enabled analysis based on both the artists and the eras.
 
-- **Veri Görselleştirme**: Dönemlere göre hangi kelimelerin daha fazla kullanıldığı belirlendi ve görselleştirildi. Ayrıca, belirli kelime gruplarıyla hangi dönemde hangi kelimelerin kullanıldığı incelendi.
+- **Data Cleaning and Preparation**: Unnecessary words were cleaned from the lyrics. Explanations were removed using the NLTK module. JSON files were converted into DataFrames, then into pickle files to make them suitable for analysis.
 
-## Kütüphaneler:
+- **Analysis**: A model from the Hugging Face library was integrated to perform sentiment analysis. The model classified the song lyrics into "positive", "negative", and "neutral" labels.
 
-- **transformers**: Hugging Face Transformers kütüphanesi, şarkı sözlerinin duygu analizini gerçekleştirmek için kullanıldı.
-- **torch**: PyTorch kütüphanesi, modelin çalıştırılması için gerekli.
-- **pandas**: Veri analizi ve işleme için kullanıldı.
-- **matplotlib**: Grafik ve görselleştirme için kullanıldı.
-- **scikit-learn**: Kelime sıklığı analizi için metin vektörizasyonu yapar.
-- **nltk**: Doğal dil işleme için kullanılan, kelime temizleme ve stopwords gibi işlemler için kullanıldı.
-- **collections**: `Counter` sınıfı, kelime sayımlarını yaparken kullanıldı.
-- **re**: Düzenli ifadeler (regex), metin temizleme ve özel kelimeleri ayıklama için kullanıldı.
-- **pickle**: Veri dosyalarını (pkl formatı) yüklemek ve kaydetmek için kullanıldı.
-- **os**: Dosya yolu işlemleri için kullanıldı.
-- **CountVectorizer (scikit-learn)**: Kelimeleri vektör haline getirmek ve kelime sıklığı analizi yapmak için kullanıldı.
-- **stopwords (nltk)**: Stopwords (gereksiz kelimeler) listesi oluşturmak için kullanıldı.
+- **Data Visualization**: It was determined and visualized which words were used more frequently in each era. Additionally, an analysis was done on which words were used in relation to specific word groups in different eras.
 
-  
-## Analizler ve Sonuçlar 📈
-Duygu Analizi (Sentiment Analysis)
+## Libraries:
 
-Duygu analizi için Twitter-roBERTa modeli kullanıldı. Model, şarkı sözlerini pozitif, negatif ve nötr olarak sınıflandırdı. Her dönem için elde edilen duygu dağılımları şöyle:
+- **transformers**: The Hugging Face Transformers library was used for sentiment analysis of song lyrics.
+- **torch**: The PyTorch library is necessary for running the model.
+- **pandas**: Used for data analysis and processing.
+- **matplotlib**: Used for graphing and visualization.
+- **scikit-learn**: Performs text vectorization for word frequency analysis.
+- **nltk**: Used for natural language processing, such as word cleaning and stopword handling.
+- **collections**: The `Counter` class was used for counting words.
+- **re**: Regular expressions (regex) were used for text cleaning and extracting specific words.
+- **pickle**: Used for loading and saving data files (pkl format).
+- **os**: Used for file path operations.
+- **CountVectorizer (scikit-learn)**: Used for vectorizing words and performing word frequency analysis.
+- **stopwords (nltk)**: Used to create a stopwords (unnecessary words) list.
 
-Örnek Duygu Dağılımı:
+## Analysis and Results 📈
 
-1960lar:
-
-Pozitif: 15
-Nötr: 33
-Negatif: 25
-1980ler:
-
-Pozitif: 30
-Nötr: 27
-Negatif: 23
-Kelime Sıklığı Analizi (Word Frequency Analysis)
-
-Kelime sıklığı analizi ile her dönemdeki en çok kullanılan kelimeler belirlendi ve yıllara göre görselleştirildi.
-
-Örnek Kelime Sıklıkları:
-
-1960lar:
-
-love: 25
-girl: 15
-baby: 30
-1980ler:
-
-love: 20
-girl: 10
-baby: 18
-
+**Sentiment Analysis**  
+The Twitter-roBERTa model was used for sentiment analysis. The model classified song lyrics as positive, negative, or neutral.
